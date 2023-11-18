@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+:root{
+    --primaryTextColor: #232e35;
+    --secondaryTextColor: #656d72;
+
+    --borderColor: #f1f1f1;
+    --lineColor: #d9d9d9;
+
+    --primaryBackgroundColor: #fff;
+    --secondaryBackgroundColor: #fbfbfb;
+    --thirdBackgroundColor: #f5f3fe;
+
+    --primaryIconColor: #CD3F3E;
+    --primaryIconColorHover: #872341;
+
+    --specialColor: #CD3F3E;
+
+    --sectionPadding: 6rem 0;
+
+    --itemBorderRadius: 0.7rem;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: var(--primaryBackgroundColor);
+}
+
+html {
+    box-sizing: border-box;
+}
+  
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+h1,h2,h3,h4,h5,h6, strong {
+    color: var(--primaryTextColor);
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.9rem;
+}
+
+p, span, label input, textarea, li {
+    color: var(--secondaryTextColor);
+}
+  
+.column {
+    float: left;
+    width: 33.3%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+}
+
+/* Nav Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    z-index: 9999;
+
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 5vh;
+    align-items: center;
+    padding: 40px 100px; 
+    top: 20px;
+    background-color: rgba(var(--primaryBackgroundColor), 0.2);
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 80px; /* Adjust the width as needed */
+    height: auto; /* Maintain the aspect ratio */
+    margin-right: 10px; /* Optional margin for spacing */
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a {
+    color: var(--primaryTextColor);
+    text-decoration: none;
+    cursor:pointer;
+}
+
+nav ul li a:hover {
+    color: var(--specialColor);
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--primaryTextColor);
+}
+
+
+
+/* Responsive Nav Bar */
+@media screen and (max-width: 768px) {
+    .column {
+      width: 100%;
+      display: block;
+    }
+
+    .logo img {
+        width: 50px; /* Adjust the width as needed */
+    }
+    
+    nav {
+        padding: 20px 30px; /* Adjust padding for smaller screens */
+    }
+    nav ul{
+        gap: 1rem; /* Adjust gap for smaller screens */
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+    }
+    .nav {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 40%;
+        background-color: var(--primaryBackgroundColor);
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+    }
+
+    .nav-list li{
+        width: 100%;
+    }
+    .nav-list a {
+        padding: 10px;
+        text-align: center;
+        text-decoration: none;
+        color: var(--primaryTextColor);
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+}
+
+/* Container */
+.main-container {
+    width:90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 63px;
+    letter-spacing: 2px;
+    color: var(--primaryTextColor);
+}
+
+h1 span{
+    color: var(--specialColor);
+}
+
+.division {
+    text-align: center;
+    font-size: 30px;
+}
+
+/* Card */
+.card {
+    background-color: var(--secondaryBackgroundColor);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: var(--itemBorderRadius);
+}
+
+.container {
+    padding: 0 16px;
+}
+  
+.container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+  
+.title {
+    color: var(--secondaryTextColor);
+}
+  
+.button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: var(--primaryIconColor);
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    text-decoration: none; /* Remove underline from anchor */
+}
+
+.button:hover {
+    background-color: var(--primaryIconColorHover);
+}
+
+.card-image{
+    border-radius: var(--itemBorderRadius);
+    overflow: hidden;
+}
+
+.card img{
+    width:100%;
+    aspect-ratio: 3/4;
+}
+
+/* Footer Section */
+footer {
+    margin-top:6rem;
+    padding: 4rem 0;
+    background: var(--primaryBackgroundColor);
+    text-align: center;
+}
+
+.footer-icons{
+    margin-bottom: 1rem;  
+}
+
+
+.footer-icons a {
+    text-decoration: none;
+    margin: 0 .5rem;
+}
+
+.footer-icons svg {
+    width: 32px;
+    height: 32px;
+    fill: var(--primaryIconColor);
+}
+
+
+.footer-icons a:hover svg {
+    fill: var(--primaryIconColorHover);
+}
+
+.copyright p a {
+    text-decoration: none;
+    color: var(--secondaryTextColor);
+}
+
+.copyright p a:hover {
+    color: var(--specialColor);
+}
+
+@media screen and (max-width: 756px) {
+    .column {
+      width: 100%;
+      display: block;
+    }
+
+    h1{
+        font-size: 50px;
+    }
+
+    #card{
+        order: -1;
+    }
+}
+
