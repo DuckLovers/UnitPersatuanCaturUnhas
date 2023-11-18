@@ -260,11 +260,51 @@ hr {
   grid-template-columns: auto lfr;
   border-radius: 15px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1 );
-  }
+}
 
-  .heading img {
-    position: relative;
-    width: 100%;
-    border-radius: 15px 15px 15px 15px;
-  }
+.heading img {
+  position: relative;
+  width: 100%;
+  border-radius: 15px 15px 15px 15px;
+}
 
+/* Footer Section */
+footer {
+  margin-top:6rem;
+  padding: 4rem 0;
+  background: var(--primaryBackgroundColor);
+  text-align: center;
+}
+
+.footer-icons{
+  margin-bottom: 1rem;  
+}
+
+
+.footer-icons a {
+  text-decoration: none;
+  margin: 0 .5rem;
+}
+
+.footer-icons svg {
+  width: 32px;
+  height: 32px;
+  fill: var(--primaryIconColor);
+}
+
+
+.footer-icons a:hover svg {
+  fill: var(--primaryIconColorHover);
+}
+
+.copyright p a {
+  text-decoration: none;
+  color: var(--secondaryTextColor);
+}
+
+.copyright p a:hover {
+  color: var(--specialColor);
+}
+
+
+  
